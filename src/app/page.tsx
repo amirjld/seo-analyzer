@@ -251,7 +251,6 @@ export default function Home() {
               </span>
             </div>
 
-
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center lg:flex-col lg:items-start xl:flex-row xl:items-center">
               <div
                 className="radial-progress shrink-0 text-primary"
@@ -261,14 +260,10 @@ export default function Home() {
                 aria-valuemin={0}
                 aria-valuemax={100}
               >
-                <span className="text-3xl font-black ">
-                  92
-                </span>
+                <span className="text-3xl font-black ">92</span>
               </div>
               <div className="min-w-0 space-y-2">
-                <p className="text-xs font-black uppercase text-neutral-content/50">
-                  Search health
-                </p>
+                <p className="text-xs font-black uppercase">Search health</p>
                 <h2 className="max-w-sm text-2xl font-black leading-tight tracking-normal">
                   Strong foundation, a few high-value fixes.
                 </h2>
@@ -488,9 +483,7 @@ function PreviewMetric({
   return (
     <div className="grid min-w-0 gap-2 rounded-lg border border-white/10 bg-white/[0.07] p-4">
       <Icon className="text-primary" size={18} aria-hidden="true" />
-      <span className="truncate text-xs font-black uppercase ">
-        {label}
-      </span>
+      <span className="truncate text-xs font-black uppercase ">{label}</span>
       <strong className="truncate text-lg">{value}</strong>
     </div>
   );
@@ -508,18 +501,12 @@ function ScoreCard({
   return (
     <article
       className={`card rounded-lg border shadow-xl shadow-slate-950/5 ${
-        primary
-          ? "bg-accent "
-          : "border-base-300/80 bg-base-100"
+        primary ? "bg-accent " : "border-base-300/80 bg-base-100"
       }`}
     >
       <div className="card-body gap-4 p-5">
         <div className="flex items-end justify-between gap-4">
-          <span
-            className={`text-xs font-black uppercase`}
-          >
-            {label}
-          </span>
+          <span className={`text-xs font-black uppercase`}>{label}</span>
           <strong className="text-5xl font-black leading-none">{value}</strong>
         </div>
         <progress
